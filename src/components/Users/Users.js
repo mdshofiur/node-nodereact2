@@ -12,14 +12,13 @@ const Users = () => {
      .then(data => setuse(data))
   },[])
 
-  
+
  // Delete Handeler
  const handledelteuser = (id) =>{
             
     const proceed = window.confirm("Are Sure to Delete?")
      
     if(proceed){
-        
         const url = `http://localhost:5000/users/${id}`;
         fetch(url,{
             method: 'DELETE',
